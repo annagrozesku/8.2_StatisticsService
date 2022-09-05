@@ -81,6 +81,17 @@
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
                 <version>4.7.0.0</version>
+
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
                 <dependencies>
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
@@ -88,6 +99,8 @@
                         <version>4.7.1</version>
                     </dependency>
                 </dependencies>
+
+
             </plugin>
         </plugins>
     </build>
